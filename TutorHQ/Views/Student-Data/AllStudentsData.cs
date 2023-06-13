@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TutorHQ.Controllers;
 
 namespace TutorHQ.Views.Student_Data
 {
@@ -44,6 +45,11 @@ namespace TutorHQ.Views.Student_Data
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AllStudentsData_Load(object sender, EventArgs e)
+        {
+            StudentControllers.GetStudentDetails(dataGridView1);
         }
     }
 }

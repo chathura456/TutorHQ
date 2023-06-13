@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -51,7 +52,7 @@ namespace TutorHQ.Controllers
         }
 
         //gwt student details
-        public static void GetStudentDetails(DataGridView dgv)
+       /* public static void GetStudentDetails(DataGridView dgv)
         {
             SqlConnection conn = GetConnection();
             string sql = "SELECT * FROM Student";
@@ -66,6 +67,39 @@ namespace TutorHQ.Controllers
             }
             conn.Close();
         }
+        */
+        public static void GetStudentDetails(DataGridView dgv)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string sql = "SELECT * FROM Student";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            dgv.Rows.Add(
+                                reader.GetInt32(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3),
+                                reader.GetInt32(4),
+                                reader.GetString(5),
+                                reader.GetString(6),
+                                reader.GetInt32(7),
+                                reader.GetString(8)
+                            );
+                        }
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+
+
 
         //get student details by id to Student class
         public static Student GetStudentDetailsByID(String id)

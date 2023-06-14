@@ -51,6 +51,9 @@
             this.button9 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.Column10 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -174,6 +174,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button6.Image = global::TutorHQ.Properties.Resources.icons8_logout_24__1x_;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(0, 623);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -297,6 +298,29 @@
             this.textBox1.Size = new System.Drawing.Size(696, 24);
             this.textBox1.TabIndex = 0;
             // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(248, 226);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(1136, 33);
+            this.panel9.TabIndex = 20;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.dataGridView1);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(248, 259);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1136, 432);
+            this.panel10.TabIndex = 21;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Column10";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            // 
             // button8
             // 
             this.button8.AutoSize = true;
@@ -418,29 +442,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(248, 226);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1136, 33);
-            this.panel9.TabIndex = 20;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.dataGridView1);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(248, 259);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1136, 432);
-            this.panel10.TabIndex = 21;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Column10";
-            this.Column10.MinimumWidth = 6;
-            this.Column10.Name = "Column10";
             // 
             // AllStudentsData
             // 

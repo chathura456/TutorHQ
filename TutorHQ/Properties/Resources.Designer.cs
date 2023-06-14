@@ -93,6 +93,16 @@ namespace TutorHQ.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_logout_24__1x_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-logout-24(@1x)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_payment_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-payment-30", resourceCulture);

@@ -33,5 +33,17 @@ namespace TutorHQ.Views.Student_Data
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Closed += (s, args) => this.Close();
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                dashboard.WindowState = FormWindowState.Maximized;
+            }
+            dashboard.Show();
+        }
     }
 }

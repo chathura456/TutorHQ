@@ -28,5 +28,30 @@ namespace TutorHQ.Views.Tutor_Data
             }
             dashboard.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTutorName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTutorName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_Tutor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSubName3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

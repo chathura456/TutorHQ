@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TutorHQ.Models;
 
 namespace TutorHQ.Controllers
@@ -56,6 +57,41 @@ namespace TutorHQ.Controllers
             return attendanceList;
         }
 
+
+
+        public static void GetAttendanceDetails(DataGridView dgv)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string sql = "SELECT * FROM Attendence";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string column1 = reader.IsDBNull(0) ? string.Empty : reader.GetString(0);
+                                string column2 = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                                string column3 = reader.IsDBNull(1) ? string.Empty : reader.GetString(2);                      
+                                string column4 = Convert.ToString(reader.GetValue(3));
+
+                                dgv.Rows.Add(column1, column2, column3, column4);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
         //get all attendenc details for a student given month and class
         public static List<AttendanceDetails> GetAttendanceDetailsByStudent(int studentID, string month, string classID)
         {
@@ -103,5 +139,8 @@ namespace TutorHQ.Controllers
             return attendanceList;
         }
 
+       
+
+        
     }
 }

@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TutorHQ.Models;
 
 namespace TutorHQ.Controllers
@@ -64,6 +65,8 @@ namespace TutorHQ.Controllers
 
 
 
+
+
         //get all fees details by student
         public static List<StudentPaymentDetails> GetPaymentDetailsByStudentID(int studentID)
         {
@@ -114,6 +117,40 @@ namespace TutorHQ.Controllers
 
             return paymentList;
         }
+
+
+
+
+        public static void GetPaymentDetails(DataGridView dgv)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string sql = "SELECT * FROM Fees";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            dgv.Rows.Add(
+                                reader.GetInt32(0),
+                                reader.GetString(1),
+                                reader.GetString(2),
+                                reader.GetString(3),
+                                reader.GetString(4)
+
+
+                            );
+                        }
+                    }
+                    reader.Close();
+                }
+            }
+        }
+
+
+
 
         //give student stails for a month
         public static List<StudentPaymentDetails> GetPaymentDetailsByStudentIDAndMonth(int studentID, string month)

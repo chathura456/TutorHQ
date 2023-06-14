@@ -53,5 +53,10 @@ namespace TutorHQ.Views.Tutor_Data
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,5 +28,10 @@ namespace TutorHQ.Views.Tutor_Data
             }
             dashboard.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

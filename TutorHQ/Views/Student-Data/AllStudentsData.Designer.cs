@@ -270,6 +270,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button2.Image = global::TutorHQ.Properties.Resources.icons8_payment_30;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 158);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

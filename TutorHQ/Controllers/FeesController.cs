@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,8 @@ namespace TutorHQ.Controllers
 {
     public class FeesController : DBconnection
     {
+        public object Con { get; private set; }
+
         //get all fees details by month for a class
         public static List<StudentPaymentDetails> GetPaymentDetailsByMonth(string month)
         {
@@ -148,6 +152,7 @@ namespace TutorHQ.Controllers
             }
         }
 
+       
 
 
 

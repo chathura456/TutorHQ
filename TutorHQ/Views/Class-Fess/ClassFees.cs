@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -129,6 +130,9 @@ namespace TutorHQ.Views.Class_Fess
         {
 
         }
+
+
+
 
         private void ClassFees_Load_1(object sender, EventArgs e)
         {

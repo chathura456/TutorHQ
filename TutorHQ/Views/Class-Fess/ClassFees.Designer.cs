@@ -372,6 +372,7 @@
             this.Name = "ClassFees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClassFees";
+            this.Load += new System.EventHandler(this.ClassFees_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

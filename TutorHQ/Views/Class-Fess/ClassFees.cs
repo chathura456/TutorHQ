@@ -104,17 +104,21 @@ namespace TutorHQ.Views.Class_Fess
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Closed += (s, args) => this.Close();
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                dashboard.WindowState = FormWindowState.Maximized;
+            }
+            dashboard.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
         }
-        private void ClassFees_Load(object sender, EventArgs e)
-        {
-            FeesController.GetPaymentDetails(dataGridView1);
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -124,6 +128,11 @@ namespace TutorHQ.Views.Class_Fess
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClassFees_Load_1(object sender, EventArgs e)
+        {
+            FeesController.GetPaymentDetails(dataGridView1);
         }
     }
 }

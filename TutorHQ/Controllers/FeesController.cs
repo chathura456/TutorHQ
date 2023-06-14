@@ -128,26 +128,27 @@ namespace TutorHQ.Controllers
                 string sql = "SELECT * FROM Fees";
                 using (SqlCommand cmd = new SqlCommand(sql, conn))
                 {
-                    SqlDataReader reader = cmd.ExecuteReader();
-                    if (reader.HasRows)
+                    using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-                        while (reader.Read())
+                        if (reader.HasRows)
                         {
-                            dgv.Rows.Add(
-                                reader.GetInt32(0),
-                                reader.GetString(1),
-                                reader.GetString(2),
-                                reader.GetString(3),
-                                reader.GetString(4)
+                            while (reader.Read())
+                            {
+                                string column1 = reader.IsDBNull(0) ? string.Empty : reader.GetInt32(0).ToString();
+                                string column2 = reader.IsDBNull(1) ? string.Empty : reader.GetInt32(1).ToString();
+                                string column3 = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                                string column4 = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                                string column5 = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
 
-
-                            );
+                                dgv.Rows.Add(column1, column2, column3, column4, column5);
+                            }
                         }
                     }
-                    reader.Close();
                 }
             }
         }
+
+
 
 
 

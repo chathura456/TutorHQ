@@ -35,31 +35,24 @@
             this.lblSubName = new System.Windows.Forms.Label();
             this.txtClassId = new System.Windows.Forms.TextBox();
             this.txtTutorPhNo = new System.Windows.Forms.TextBox();
-            this.btnSubmit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.cmbSubName = new System.Windows.Forms.ComboBox();
             this.lblClassId = new System.Windows.Forms.Label();
-            this.lblSubName2 = new System.Windows.Forms.Label();
             this.lblSubName3 = new System.Windows.Forms.Label();
             this.lblClassTyp = new System.Windows.Forms.Label();
             this.cmbClassTyp = new System.Windows.Forms.ComboBox();
             this.lblClassFees = new System.Windows.Forms.Label();
             this.txtClassFees = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.txtTutorName = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(825, 725);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Location = new System.Drawing.Point(959, 645);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(308, 49);
             this.btnBack.TabIndex = 14;
@@ -72,7 +65,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(504, 49);
+            this.label1.Location = new System.Drawing.Point(510, 18);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(225, 46);
@@ -116,10 +109,10 @@
             // txtClassId
             // 
             this.txtClassId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassId.Location = new System.Drawing.Point(173, 384);
-            this.txtClassId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClassId.Location = new System.Drawing.Point(547, 340);
+            this.txtClassId.Margin = new System.Windows.Forms.Padding(4);
             this.txtClassId.Name = "txtClassId";
-            this.txtClassId.Size = new System.Drawing.Size(161, 30);
+            this.txtClassId.Size = new System.Drawing.Size(469, 30);
             this.txtClassId.TabIndex = 20;
             this.txtClassId.TextChanged += new System.EventHandler(this.txtTutorName_TextChanged);
             // 
@@ -127,22 +120,23 @@
             // 
             this.txtTutorPhNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTutorPhNo.Location = new System.Drawing.Point(547, 217);
-            this.txtTutorPhNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTutorPhNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtTutorPhNo.Name = "txtTutorPhNo";
             this.txtTutorPhNo.Size = new System.Drawing.Size(469, 30);
             this.txtTutorPhNo.TabIndex = 21;
             // 
-            // btnSubmit
+            // btnSave
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(173, 734);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(308, 49);
-            this.btnSubmit.TabIndex = 23;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(105, 645);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(308, 49);
+            this.btnSave.TabIndex = 23;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // cmbSubName
             // 
@@ -168,7 +162,7 @@
             "Science for Technology",
             "Engineering Technology"});
             this.cmbSubName.Location = new System.Drawing.Point(547, 277);
-            this.cmbSubName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbSubName.Margin = new System.Windows.Forms.Padding(4);
             this.cmbSubName.Name = "cmbSubName";
             this.cmbSubName.Size = new System.Drawing.Size(469, 33);
             this.cmbSubName.TabIndex = 24;
@@ -177,23 +171,12 @@
             // 
             this.lblClassId.AutoSize = true;
             this.lblClassId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassId.Location = new System.Drawing.Point(168, 331);
+            this.lblClassId.Location = new System.Drawing.Point(168, 345);
             this.lblClassId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassId.Name = "lblClassId";
             this.lblClassId.Size = new System.Drawing.Size(151, 25);
             this.lblClassId.TabIndex = 25;
             this.lblClassId.Text = "Enter Class ID";
-            // 
-            // lblSubName2
-            // 
-            this.lblSubName2.AutoSize = true;
-            this.lblSubName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubName2.Location = new System.Drawing.Point(392, 331);
-            this.lblSubName2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSubName2.Name = "lblSubName2";
-            this.lblSubName2.Size = new System.Drawing.Size(147, 25);
-            this.lblSubName2.TabIndex = 26;
-            this.lblSubName2.Text = "Subject Name";
             // 
             // lblSubName3
             // 
@@ -210,7 +193,7 @@
             // 
             this.lblClassTyp.AutoSize = true;
             this.lblClassTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassTyp.Location = new System.Drawing.Point(604, 331);
+            this.lblClassTyp.Location = new System.Drawing.Point(168, 409);
             this.lblClassTyp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassTyp.Name = "lblClassTyp";
             this.lblClassTyp.Size = new System.Drawing.Size(122, 25);
@@ -226,17 +209,17 @@
             "Grade 13",
             "Paper Class",
             "Revision Class"});
-            this.cmbClassTyp.Location = new System.Drawing.Point(609, 382);
-            this.cmbClassTyp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbClassTyp.Location = new System.Drawing.Point(547, 401);
+            this.cmbClassTyp.Margin = new System.Windows.Forms.Padding(4);
             this.cmbClassTyp.Name = "cmbClassTyp";
-            this.cmbClassTyp.Size = new System.Drawing.Size(169, 33);
+            this.cmbClassTyp.Size = new System.Drawing.Size(469, 33);
             this.cmbClassTyp.TabIndex = 29;
             // 
             // lblClassFees
             // 
             this.lblClassFees.AutoSize = true;
             this.lblClassFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClassFees.Location = new System.Drawing.Point(836, 331);
+            this.lblClassFees.Location = new System.Drawing.Point(168, 477);
             this.lblClassFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblClassFees.Name = "lblClassFees";
             this.lblClassFees.Size = new System.Drawing.Size(121, 25);
@@ -246,94 +229,50 @@
             // txtClassFees
             // 
             this.txtClassFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClassFees.Location = new System.Drawing.Point(825, 382);
-            this.txtClassFees.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtClassFees.Location = new System.Drawing.Point(547, 472);
+            this.txtClassFees.Margin = new System.Windows.Forms.Padding(4);
             this.txtClassFees.Name = "txtClassFees";
-            this.txtClassFees.Size = new System.Drawing.Size(191, 30);
+            this.txtClassFees.Size = new System.Drawing.Size(469, 30);
             this.txtClassFees.TabIndex = 31;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(1059, 382);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(188, 34);
-            this.btnAdd.TabIndex = 32;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.txtClassFees.TextChanged += new System.EventHandler(this.txtClassFees_TextChanged);
             // 
             // txtTutorName
             // 
             this.txtTutorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTutorName.Location = new System.Drawing.Point(547, 158);
-            this.txtTutorName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTutorName.Margin = new System.Windows.Forms.Padding(4);
             this.txtTutorName.Name = "txtTutorName";
             this.txtTutorName.Size = new System.Drawing.Size(469, 30);
             this.txtTutorName.TabIndex = 33;
             // 
-            // dataGridView1
+            // btnReset
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(173, 446);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(967, 256);
-            this.dataGridView1.TabIndex = 34;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Class ID";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Subject Name";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Class Type";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Class Fees";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 125;
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(547, 645);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(308, 49);
+            this.btnReset.TabIndex = 34;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // Add_Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1312, 814);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.txtTutorName);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtClassFees);
             this.Controls.Add(this.lblClassFees);
             this.Controls.Add(this.cmbClassTyp);
             this.Controls.Add(this.lblClassTyp);
             this.Controls.Add(this.lblSubName3);
-            this.Controls.Add(this.lblSubName2);
             this.Controls.Add(this.lblClassId);
             this.Controls.Add(this.cmbSubName);
-            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtTutorPhNo);
             this.Controls.Add(this.txtClassId);
             this.Controls.Add(this.lblSubName);
@@ -341,12 +280,11 @@
             this.Controls.Add(this.lblTutorName);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_Tutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Tutor";
             this.Load += new System.EventHandler(this.Add_Tutor_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,21 +299,15 @@
         private System.Windows.Forms.Label lblSubName;
         private System.Windows.Forms.TextBox txtClassId;
         private System.Windows.Forms.TextBox txtTutorPhNo;
-        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox cmbSubName;
         private System.Windows.Forms.Label lblClassId;
-        private System.Windows.Forms.Label lblSubName2;
         private System.Windows.Forms.Label lblSubName3;
         private System.Windows.Forms.Label lblClassTyp;
         private System.Windows.Forms.ComboBox cmbClassTyp;
         private System.Windows.Forms.Label lblClassFees;
         private System.Windows.Forms.TextBox txtClassFees;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TextBox txtTutorName;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Button btnReset;
     }
 }

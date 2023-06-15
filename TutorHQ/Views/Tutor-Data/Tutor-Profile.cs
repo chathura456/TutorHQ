@@ -33,5 +33,10 @@ namespace TutorHQ.Views.Tutor_Data
         {
 
         }
+
+        private void Tutor_Profile_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

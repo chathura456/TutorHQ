@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace TutorHQ.Views.Tutor_Data
 {
     public partial class Add_Tutor : Form
     {
+        public object TutorControllers { get; private set; }
+
         public Add_Tutor()
         {
             InitializeComponent();
@@ -58,5 +62,52 @@ namespace TutorHQ.Views.Tutor_Data
         {
 
         }
+
+        private void txtClassFees_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtTutorName.Text == null)
+            {
+                object value = errorProvider1.SetError(txtTutorName, "Tutor Name is Required");
+            }
+
+            string name = txtTutorName.Text;
+            int CNo = int.Parse(txtTutorPhNo.Text);
+            string SubName = cmbSubName.SelectedItem.ToString();
+            string ClassId = txtClassId.Text;
+            string ClassTyp = cmbClassTyp.SelectedItem.ToString();
+            string ClassFees = txtClassFees.Text;
+
+            Tutor newTutor = new Tutor();
+            newTutor.Tt_Name = name;
+            newTutor.Tt_CNo = CNo;
+            newTutor.Tt_SubName = SubName;
+            newTutor.Tt_ClassId = ClassId;
+            newTutor.Tt_ClassTyp = ClassTyp;
+            newTutor.Tt_ClassFees = ClassFees;
+
+            
+            
+
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+        public void Clear()
+        {
+            txtTutorName.Clear();   
+            txtTutorPhNo.Clear();
+            cmbSubName.ResetText();
+            txtClassId.Clear();
+            cmbClassTyp.ResetText();
+
+        }
+
     }
 }

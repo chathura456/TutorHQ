@@ -120,12 +120,14 @@
     <Compile Include="Views\Tutor-Data\AllTutorsData.Designer.cs">
       <DependentUpon>AllTutorsData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tutor-Data\errorProvider1.cs" />
     <Compile Include="Views\Tutor-Data\Tutor-Profile.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Tutor-Data\Tutor-Profile.Designer.cs">
       <DependentUpon>Tutor-Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tutor-Data\Tutor.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +176,9 @@
     <EmbeddedResource Include="Views\Tutor-Data\Tutor-Profile.resx">
       <DependentUpon>Tutor-Profile.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

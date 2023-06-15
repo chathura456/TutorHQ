@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
 using TutorHQ.Views.Class_Fess;
-using TutorHQ.Views.Student_Data;
 using TutorHQ.Views.Tutor_Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -180,14 +179,14 @@ namespace TutorHQ.Views.Attendence
         private void label5_Click(object sender, EventArgs e)
         {
 
-            Hide();
+           /* Hide();
             AllStudentsData form2 = new AllStudentsData();
             form2.Closed += (s, args) => this.Close();
             if (this.WindowState == FormWindowState.Maximized)
             {
                 form2.WindowState = FormWindowState.Maximized;
             }
-            form2.Show();
+            form2.Show();*/
         }
 
         private void label1_Click(object sender, EventArgs e)

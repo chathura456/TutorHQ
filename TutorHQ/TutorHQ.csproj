@@ -100,24 +100,6 @@
     <Compile Include="Views\Schedules\Schedules.Designer.cs">
       <DependentUpon>Schedules.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Student-Data\Add-Student.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Student-Data\Add-Student.Designer.cs">
-      <DependentUpon>Add-Student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Student-Data\AllStudentsData.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Student-Data\AllStudentsData.Designer.cs">
-      <DependentUpon>AllStudentsData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Student-Data\Student-Profile.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\Student-Data\Student-Profile.Designer.cs">
-      <DependentUpon>Student-Profile.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Tutor-Data\Add-Tutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,15 +148,6 @@
     <EmbeddedResource Include="Views\Schedules\Schedules.resx">
       <DependentUpon>Schedules.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student-Data\Add-Student.resx">
-      <DependentUpon>Add-Student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student-Data\AllStudentsData.resx">
-      <DependentUpon>AllStudentsData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\Student-Data\Student-Profile.resx">
-      <DependentUpon>Student-Profile.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\Tutor-Data\Add-Tutor.resx">
       <DependentUpon>Add-Tutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\" />
+    <Folder Include="Views\Student-Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

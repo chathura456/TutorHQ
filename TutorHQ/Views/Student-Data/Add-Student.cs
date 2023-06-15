@@ -58,11 +58,13 @@ namespace TutorHQ.Views.Student_Data
             // Event handler for the registerButton's click event
             if (textBox1.Text == null)
             {
-                errorProvider.SetError(textBox1, "First Name is Required");
+                errorProvider1.SetError(textBox1, "First Name is Required");
             }
-            
-                // Retrieve the data entered by the user from the UI controls
-                string name = textBox1.Text;
+
+           
+
+            // Retrieve the data entered by the user from the UI controls
+            string name = textBox1.Text;
                 string gender = comboBox2.SelectedItem.ToString();
                 string nic = textBox2.Text;
                 int phoneNo = int.Parse(textBox3.Text);

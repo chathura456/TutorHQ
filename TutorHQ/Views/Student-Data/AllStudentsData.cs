@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TutorHQ.Views.Student_Data
 {
@@ -50,6 +51,23 @@ namespace TutorHQ.Views.Student_Data
 
         private void AllStudentsData_Load(object sender, EventArgs e)
         {
+            StudentControllers.GetStudentDetails(dataGridView1);
+
+            // Load the initial student data
+            RefreshData();
+        }
+
+
+        private void RefreshData()
+        {
+            // Clear the existing data in the DataGridView
+            dataGridView1.Rows.Clear();
+
+
+            // Clear the text in the TextBox
+            textBox1.Clear();
+
+            // Reload the student data
             StudentControllers.GetStudentDetails(dataGridView1);
         }
 
@@ -126,6 +144,23 @@ namespace TutorHQ.Views.Student_Data
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            // Call the RefreshData method to reload the student data
+            RefreshData();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // Call the RefreshData method to reload the student data
+            RefreshData();
         }
     }
 }

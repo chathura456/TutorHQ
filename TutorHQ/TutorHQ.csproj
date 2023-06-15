@@ -221,5 +221,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-add-user-male-30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-24%28%401x%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

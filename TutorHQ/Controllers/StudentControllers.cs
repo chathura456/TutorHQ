@@ -108,13 +108,13 @@ namespace TutorHQ.Controllers
             SqlConnection conn = GetConnection();
             string sql = "SELECT * FROM Student WHERE Student_ID = @id;";
             SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@id", int.Parse(id));
             SqlDataReader reader = cmd.ExecuteReader();
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    student.Student_ID = Convert.ToInt32(reader["St_ID"]);
+                   // student.Student_ID = Convert.ToInt32(reader["St_ID"]);
                     student.St_Name = reader["St_Name"].ToString();
                     student.Gender = reader["Gender"].ToString();
                     student.NIC = reader["NIC"].ToString();

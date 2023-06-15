@@ -63,5 +63,34 @@ namespace TutorHQ.Views.Student_Data
             }
             dashboard.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 9)
+            {
+                var id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                
+                Hide();
+                Student_Proile dashboard = new Student_Proile();
+                dashboard.id = id;
+                dashboard.Closed += (s, args) => this.Close();
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    dashboard.WindowState = FormWindowState.Maximized;
+                }
+                dashboard.Show();
+            }
+        }
     }
 }

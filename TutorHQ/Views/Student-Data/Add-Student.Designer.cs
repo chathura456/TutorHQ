@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@
             this.panel27 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -73,36 +74,20 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.panel34 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel43 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel37 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.panel41 = new System.Windows.Forms.Panel();
@@ -110,12 +95,12 @@
             this.panel42 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stream = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -137,28 +122,20 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel34.SuspendLayout();
-            this.panel29.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel18.SuspendLayout();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
             this.panel36.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel40.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.panel43.SuspendLayout();
             this.panel35.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel41.SuspendLayout();
             this.panel42.SuspendLayout();
-            this.panel45.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel46.SuspendLayout();
+            this.panel48.SuspendLayout();
+            this.panel47.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -175,7 +152,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 694);
+            this.panel1.Size = new System.Drawing.Size(248, 677);
             this.panel1.TabIndex = 17;
             // 
             // button6
@@ -186,7 +163,7 @@
             this.button6.ForeColor = System.Drawing.Color.Gainsboro;
             this.button6.Image = global::TutorHQ.Properties.Resources.icons8_logout_24__1x_;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 626);
+            this.button6.Location = new System.Drawing.Point(0, 609);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(14, 0, 0, 0);
@@ -371,9 +348,9 @@
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
             this.label9.Padding = new System.Windows.Forms.Padding(50, 30, 0, 0);
-            this.label9.Size = new System.Drawing.Size(264, 50);
+            this.label9.Size = new System.Drawing.Size(274, 50);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Parent/Guardian Detail :";
+            this.label9.Text = "Parent/Guardian Details :";
             // 
             // panel24
             // 
@@ -400,9 +377,9 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(50, 30, 0, 0);
-            this.label1.Size = new System.Drawing.Size(191, 50);
+            this.label1.Size = new System.Drawing.Size(201, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Student Detail :";
+            this.label1.Text = "Student Details :";
             // 
             // panel6
             // 
@@ -538,19 +515,23 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.dateTimePicker1);
+            this.panel10.Controls.Add(this.comboBox2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(145, 0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(376, 38);
             this.panel10.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // comboBox2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(337, 22);
-            this.dateTimePicker1.TabIndex = 2;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.comboBox2.Location = new System.Drawing.Point(6, 6);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(175, 24);
+            this.comboBox2.TabIndex = 2;
             // 
             // panel11
             // 
@@ -568,9 +549,9 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Padding = new System.Windows.Forms.Padding(50, 10, 0, 0);
-            this.label4.Size = new System.Drawing.Size(134, 26);
+            this.label4.Size = new System.Drawing.Size(108, 26);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Date of birth :";
+            this.label4.Text = "Gender :";
             // 
             // panel12
             // 
@@ -658,8 +639,6 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.panel34);
-            this.panel15.Controls.Add(this.panel29);
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
@@ -667,42 +646,6 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1064, 38);
             this.panel15.TabIndex = 23;
-            // 
-            // panel34
-            // 
-            this.panel34.Controls.Add(this.textBox8);
-            this.panel34.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel34.Location = new System.Drawing.Point(666, 0);
-            this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(370, 38);
-            this.panel34.TabIndex = 23;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(3, 6);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(351, 22);
-            this.textBox8.TabIndex = 0;
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.label13);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel29.Location = new System.Drawing.Point(521, 0);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(145, 38);
-            this.panel29.TabIndex = 22;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Padding = new System.Windows.Forms.Padding(50, 10, 0, 0);
-            this.label13.Size = new System.Drawing.Size(85, 26);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "NIC :";
             // 
             // panel16
             // 
@@ -740,144 +683,37 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "NIC :";
             // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.panel19);
-            this.panel21.Controls.Add(this.panel18);
-            this.panel21.Controls.Add(this.panel22);
-            this.panel21.Controls.Add(this.panel23);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(248, 305);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(1064, 68);
-            this.panel21.TabIndex = 25;
-            // 
-            // panel19
-            // 
-            this.panel19.Controls.Add(this.textBox9);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel19.Location = new System.Drawing.Point(666, 0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(370, 68);
-            this.panel19.TabIndex = 23;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(3, 6);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(351, 59);
-            this.textBox9.TabIndex = 1;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label7);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel18.Location = new System.Drawing.Point(521, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(145, 68);
-            this.panel18.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(50, 10, 0, 0);
-            this.label7.Size = new System.Drawing.Size(114, 26);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Address :";
-            // 
-            // panel22
-            // 
-            this.panel22.Controls.Add(this.textBox4);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel22.Location = new System.Drawing.Point(145, 0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(376, 68);
-            this.panel22.TabIndex = 21;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(6, 6);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(337, 59);
-            this.textBox4.TabIndex = 1;
-            // 
-            // panel23
-            // 
-            this.panel23.Controls.Add(this.label8);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel23.Location = new System.Drawing.Point(0, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(145, 68);
-            this.panel23.TabIndex = 20;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(50, 10, 0, 0);
-            this.label8.Size = new System.Drawing.Size(114, 26);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Address :";
-            // 
             // panel36
             // 
             this.panel36.Controls.Add(this.panel39);
             this.panel36.Controls.Add(this.panel40);
             this.panel36.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel36.Location = new System.Drawing.Point(248, 373);
+            this.panel36.Location = new System.Drawing.Point(248, 305);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(1064, 38);
             this.panel36.TabIndex = 26;
             // 
             // panel39
             // 
-            this.panel39.Controls.Add(this.comboBox2);
             this.panel39.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel39.Location = new System.Drawing.Point(145, 0);
             this.panel39.Name = "panel39";
             this.panel39.Size = new System.Drawing.Size(376, 38);
             this.panel39.TabIndex = 21;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 6);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(337, 24);
-            this.comboBox2.TabIndex = 0;
-            // 
             // panel40
             // 
-            this.panel40.Controls.Add(this.label16);
             this.panel40.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel40.Location = new System.Drawing.Point(0, 0);
             this.panel40.Name = "panel40";
             this.panel40.Size = new System.Drawing.Size(145, 38);
             this.panel40.TabIndex = 20;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label16.Location = new System.Drawing.Point(0, 0);
-            this.label16.Name = "label16";
-            this.label16.Padding = new System.Windows.Forms.Padding(50, 10, 0, 0);
-            this.label16.Size = new System.Drawing.Size(108, 26);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Gender :";
-            // 
             // panel30
             // 
             this.panel30.Controls.Add(this.panel38);
             this.panel30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel30.Location = new System.Drawing.Point(248, 411);
+            this.panel30.Location = new System.Drawing.Point(248, 343);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(1064, 63);
             this.panel30.TabIndex = 28;
@@ -899,9 +735,9 @@
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Name = "label15";
             this.label15.Padding = new System.Windows.Forms.Padding(50, 30, 0, 0);
-            this.label15.Size = new System.Drawing.Size(190, 50);
+            this.label15.Size = new System.Drawing.Size(200, 50);
             this.label15.TabIndex = 0;
-            this.label15.Text = "Subject Detail :";
+            this.label15.Text = "Subject Details :";
             // 
             // panel20
             // 
@@ -911,45 +747,34 @@
             this.panel20.Controls.Add(this.panel41);
             this.panel20.Controls.Add(this.panel42);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(248, 474);
+            this.panel20.Location = new System.Drawing.Point(248, 406);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(1064, 38);
             this.panel20.TabIndex = 29;
             // 
             // panel43
             // 
-            this.panel43.Controls.Add(this.button8);
             this.panel43.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel43.Location = new System.Drawing.Point(821, 0);
             this.panel43.Name = "panel43";
             this.panel43.Size = new System.Drawing.Size(112, 38);
             this.panel43.TabIndex = 24;
             // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(88, 24);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Add";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // panel35
             // 
-            this.panel35.Controls.Add(this.comboBox3);
+            this.panel35.Controls.Add(this.textBox9);
             this.panel35.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel35.Location = new System.Drawing.Point(535, 0);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(286, 38);
             this.panel35.TabIndex = 23;
             // 
-            // comboBox3
+            // textBox9
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(6, 6);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(269, 24);
-            this.comboBox3.TabIndex = 1;
+            this.textBox9.Location = new System.Drawing.Point(6, 6);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(263, 22);
+            this.textBox9.TabIndex = 2;
             // 
             // panel37
             // 
@@ -983,6 +808,12 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Physical Science",
+            "Bio Science",
+            "Commerce",
+            "Technology",
+            "Art"});
             this.comboBox1.Location = new System.Drawing.Point(6, 6);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(177, 24);
@@ -1011,86 +842,75 @@
             // panel44
             // 
             this.panel44.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel44.Location = new System.Drawing.Point(248, 512);
+            this.panel44.Location = new System.Drawing.Point(248, 444);
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(1064, 13);
             this.panel44.TabIndex = 30;
             // 
-            // panel45
+            // panel46
             // 
-            this.panel45.Controls.Add(this.dataGridView1);
-            this.panel45.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel45.Location = new System.Drawing.Point(248, 525);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(1064, 171);
-            this.panel45.TabIndex = 31;
+            this.panel46.Controls.Add(this.panel48);
+            this.panel46.Controls.Add(this.panel47);
+            this.panel46.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel46.Location = new System.Drawing.Point(248, 587);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(1064, 90);
+            this.panel46.TabIndex = 32;
             // 
-            // dataGridView1
+            // panel48
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Subject,
-            this.Tutor,
-            this.Stream,
-            this.remove});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1064, 171);
-            this.dataGridView1.TabIndex = 0;
+            this.panel48.Controls.Add(this.button9);
+            this.panel48.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel48.Location = new System.Drawing.Point(716, 0);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(200, 90);
+            this.panel48.TabIndex = 1;
             // 
-            // Subject
+            // button9
             // 
-            this.Subject.FillWeight = 32.46753F;
-            this.Subject.HeaderText = "Subject";
-            this.Subject.MinimumWidth = 6;
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.button9.Location = new System.Drawing.Point(47, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(137, 52);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Reset";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // Tutor
+            // panel47
             // 
-            this.Tutor.FillWeight = 102.5274F;
-            this.Tutor.HeaderText = "Tutor";
-            this.Tutor.MinimumWidth = 6;
-            this.Tutor.Name = "Tutor";
-            this.Tutor.ReadOnly = true;
+            this.panel47.Controls.Add(this.button10);
+            this.panel47.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel47.Location = new System.Drawing.Point(916, 0);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(148, 90);
+            this.panel47.TabIndex = 0;
             // 
-            // Stream
+            // button10
             // 
-            this.Stream.HeaderText = "Stream";
-            this.Stream.MinimumWidth = 6;
-            this.Stream.Name = "Stream";
-            this.Stream.ReadOnly = true;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
+            this.button10.Location = new System.Drawing.Point(6, 3);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(130, 52);
+            this.button10.TabIndex = 1;
+            this.button10.Text = "Save";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // remove
+            // errorProvider1
             // 
-            this.remove.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.remove.FillWeight = 165.0051F;
-            this.remove.HeaderText = "";
-            this.remove.MinimumWidth = 6;
-            this.remove.Name = "remove";
-            this.remove.ReadOnly = true;
-            this.remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Add_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 694);
-            this.Controls.Add(this.panel45);
+            this.ClientSize = new System.Drawing.Size(1312, 677);
+            this.Controls.Add(this.panel46);
             this.Controls.Add(this.panel44);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel30);
             this.Controls.Add(this.panel36);
-            this.Controls.Add(this.panel21);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel9);
@@ -1098,7 +918,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Add_Student";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Student";
@@ -1137,40 +957,26 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel15.ResumeLayout(false);
-            this.panel34.ResumeLayout(false);
-            this.panel34.PerformLayout();
-            this.panel29.ResumeLayout(false);
-            this.panel29.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
-            this.panel21.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
-            this.panel22.ResumeLayout(false);
-            this.panel22.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
             this.panel36.ResumeLayout(false);
-            this.panel39.ResumeLayout(false);
-            this.panel40.ResumeLayout(false);
-            this.panel40.PerformLayout();
             this.panel30.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
             this.panel20.ResumeLayout(false);
-            this.panel43.ResumeLayout(false);
             this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
             this.panel37.ResumeLayout(false);
             this.panel37.PerformLayout();
             this.panel41.ResumeLayout(false);
             this.panel42.ResumeLayout(false);
             this.panel42.PerformLayout();
-            this.panel45.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel46.ResumeLayout(false);
+            this.panel48.ResumeLayout(false);
+            this.panel47.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1208,7 +1014,6 @@
         private System.Windows.Forms.Panel panel27;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel12;
@@ -1221,36 +1026,17 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel34;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Panel panel29;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel36;
-        private System.Windows.Forms.Panel panel39;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Panel panel40;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel43;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel41;
@@ -1258,11 +1044,16 @@
         private System.Windows.Forms.Panel panel42;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Panel panel45;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tutor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Stream;
-        private System.Windows.Forms.DataGridViewButtonColumn remove;
+        private System.Windows.Forms.Panel panel46;
+        private System.Windows.Forms.Panel panel48;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Panel panel47;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

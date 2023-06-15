@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
@@ -23,9 +24,15 @@ namespace TutorHQ
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" && txtPass.Text == "")
+            if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
-                MessageBox.Show("Email and Password Fields are empty ", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
+                errorProvider1.SetError(txtName, "Username Cannot be null");
+            }
+            else if (string.IsNullOrEmpty(txtPass.Text.Trim()))
+            {
+                txtName.Focus();
+                errorProvider1.SetError(txtPass, "Password Cannot be null");
             }
             else
             {
@@ -107,6 +114,24 @@ namespace TutorHQ
             else
             {
                 txtPass.PasswordChar = '*';
+            }
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPass.Text.Trim()))
+            {
+                txtPass.Focus();
+                errorProvider1.SetError(txtPass, "Password Cannot be null");
+            }
+            else
+            {
+                errorProvider1.Clear();
             }
         }
     }

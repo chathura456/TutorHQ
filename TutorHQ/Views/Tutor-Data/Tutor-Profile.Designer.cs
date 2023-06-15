@@ -39,7 +39,15 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fess = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -79,19 +87,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fess = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel30.SuspendLayout();
             this.panel38.SuspendLayout();
             this.panel47.SuspendLayout();
@@ -102,6 +104,7 @@
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel18.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -110,7 +113,6 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel32
@@ -230,6 +232,19 @@
             this.panel22.Size = new System.Drawing.Size(127, 31);
             this.panel22.TabIndex = 20;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(38, 8, 0, 0);
+            this.label8.Size = new System.Drawing.Size(127, 23);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Contact No. :";
+            // 
             // panel15
             // 
             this.panel15.Controls.Add(this.dataGridView1);
@@ -239,6 +254,55 @@
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(842, 164);
             this.panel15.TabIndex = 47;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Class_ID,
+            this.Subject_Name,
+            this.Type,
+            this.Fess,
+            this.Column1,
+            this.Column2});
+            this.dataGridView1.Location = new System.Drawing.Point(101, 7);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(640, 150);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // Class_ID
+            // 
+            this.Class_ID.HeaderText = "Class_ID";
+            this.Class_ID.Name = "Class_ID";
+            // 
+            // Subject_Name
+            // 
+            this.Subject_Name.HeaderText = "Subject_Name";
+            this.Subject_Name.Name = "Subject_Name";
+            // 
+            // Type
+            // 
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            // 
+            // Fess
+            // 
+            this.Fess.HeaderText = "Fess";
+            this.Fess.Name = "Fess";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.Text = "Edit";
+            this.Column1.UseColumnTextForButtonValue = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.Text = "Delete";
+            this.Column2.UseColumnTextForButtonValue = true;
             // 
             // panel30
             // 
@@ -534,6 +598,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.panel16);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -729,67 +794,17 @@
             this.panel1.Size = new System.Drawing.Size(186, 561);
             this.panel1.TabIndex = 36;
             // 
-            // label8
+            // panel16
             // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(38, 8, 0, 0);
-            this.label8.Size = new System.Drawing.Size(127, 23);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Contact No. :";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Class_ID,
-            this.Subject_Name,
-            this.Type,
-            this.Fess,
-            this.Column1,
-            this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(101, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(640, 150);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // Class_ID
-            // 
-            this.Class_ID.HeaderText = "Class_ID";
-            this.Class_ID.Name = "Class_ID";
-            // 
-            // Subject_Name
-            // 
-            this.Subject_Name.HeaderText = "Subject_Name";
-            this.Subject_Name.Name = "Subject_Name";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            // 
-            // Fess
-            // 
-            this.Fess.HeaderText = "Fess";
-            this.Fess.Name = "Fess";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Edit";
-            this.Column1.UseColumnTextForButtonValue = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Delete";
-            this.Column2.UseColumnTextForButtonValue = true;
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel16.BackgroundImage = global::TutorHQ.Properties.Resources.TutorHQHigh;
+            this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(186, 73);
+            this.panel16.TabIndex = 1;
             // 
             // Tutor_Profile
             // 
@@ -819,6 +834,7 @@
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel30.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
@@ -832,6 +848,7 @@
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel9.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -844,7 +861,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -910,5 +926,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Fess;
         private System.Windows.Forms.DataGridViewButtonColumn Column1;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.Panel panel16;
     }
 }

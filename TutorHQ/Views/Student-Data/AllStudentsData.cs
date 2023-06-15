@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
+using TutorHQ.Navigation;
+using TutorHQ.Views.Attendence;
+using TutorHQ.Views.Class_Fess;
+using TutorHQ.Views.Schedules;
+using TutorHQ.Views.Tutor_Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TutorHQ.Views.Student_Data
@@ -73,14 +78,7 @@ namespace TutorHQ.Views.Student_Data
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                dashboard.WindowState = FormWindowState.Maximized;
-            }
-            dashboard.Show();
+            NavigateTo.To<Dashboard>(this);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -165,7 +163,7 @@ namespace TutorHQ.Views.Student_Data
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            NavigateTo.To<LoginForm>(this);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -178,29 +176,29 @@ namespace TutorHQ.Views.Student_Data
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            NavigateTo.To<CheckAttendence>(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            NavigateTo.To<ClassFees>(this);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            NavigateTo.To<AllSchedules>(this);
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllStudentsData>(this);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllTutorsData>(this);
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

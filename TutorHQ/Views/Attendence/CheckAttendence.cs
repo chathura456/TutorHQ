@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
+using TutorHQ.Navigation;
 using TutorHQ.Views.Class_Fess;
+using TutorHQ.Views.Schedules;
+using TutorHQ.Views.Student_Data;
 using TutorHQ.Views.Tutor_Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -27,14 +30,14 @@ namespace TutorHQ.Views.Attendence
 
         private void addAtten_Click(object sender, EventArgs e)
         {
-            Hide();
+            /*Hide();
             AddAttendence form2 = new AddAttendence();
             form2.Closed += (s, args) => this.Close();
             if (this.WindowState == FormWindowState.Maximized)
             {
                 form2.WindowState = FormWindowState.Maximized;
             }
-            form2.Show();
+            form2.Show();*/
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -220,6 +223,41 @@ namespace TutorHQ.Views.Attendence
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             AttendenceControllers.GetAttendanceDetails(dataGridView1);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<CheckAttendence>(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<ClassFees>(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllSchedules>(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllStudentsData>(this);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllTutorsData>(this);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<LoginForm>(this);
         }
     }
 } 

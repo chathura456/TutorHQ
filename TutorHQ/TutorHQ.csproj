@@ -68,6 +68,7 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Users.cs" />
+    <Compile Include="Navigation\NavigateTo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Attendence\AddAttendence.cs">
@@ -94,11 +95,11 @@
     <Compile Include="Views\Schedules\Edit-Schedule.Designer.cs">
       <DependentUpon>Edit-Schedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Schedules\Schedules.cs">
+    <Compile Include="Views\Schedules\AllSchedules.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Schedules\Schedules.Designer.cs">
-      <DependentUpon>Schedules.cs</DependentUpon>
+    <Compile Include="Views\Schedules\AllSchedules.Designer.cs">
+      <DependentUpon>AllSchedules.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Student-Data\Add-Student.cs">
       <SubType>Form</SubType>
@@ -164,8 +165,8 @@
     <EmbeddedResource Include="Views\Schedules\Edit-Schedule.resx">
       <DependentUpon>Edit-Schedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Schedules\Schedules.resx">
-      <DependentUpon>Schedules.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Schedules\AllSchedules.resx">
+      <DependentUpon>AllSchedules.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Student-Data\Add-Student.resx">
       <DependentUpon>Add-Student.cs</DependentUpon>
@@ -199,9 +200,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-add-user-male-30.png" />
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +228,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-training-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutorHQHigh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TutorHQ Blue.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
+using TutorHQ.Navigation;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace TutorHQ
@@ -70,14 +71,7 @@ namespace TutorHQ
                         if (reader.Read())
                         {
                             MessageBox.Show("Login Success");
-                            Hide();
-                            Dashboard dashboard = new Dashboard();
-                            dashboard.Closed += (s, args) => this.Close();
-                            if (this.WindowState == FormWindowState.Maximized)
-                            {
-                                dashboard.WindowState = FormWindowState.Maximized;
-                            }
-                            dashboard.Show();
+                            NavigateTo.To<Dashboard>(this);
 
                         }
                         else

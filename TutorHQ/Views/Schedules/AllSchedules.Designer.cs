@@ -1,6 +1,6 @@
 ﻿namespace TutorHQ.Views.Schedules
 {
-    partial class Schedules
+    partial class AllSchedules
     {
         /// <summary>
         /// Required designer variable.
@@ -79,6 +79,7 @@
             this.Name = "Schedules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schedules";
+            this.Load += new System.EventHandler(this.Schedules_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TutorHQ.Navigation;
 using TutorHQ.Views.Attendence;
 using TutorHQ.Views.Class_Fess;
 using TutorHQ.Views.Schedules;
@@ -24,86 +25,38 @@ namespace TutorHQ
 
         private void btnAddStd_Click(object sender, EventArgs e)
         {
-           Hide();
-            Add_Student form= new Add_Student();
-            form.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form.WindowState = FormWindowState.Maximized;
-            }
-            form.Show();
+        
+           NavigateTo.To<Add_Student>(this);
         }
 
         private void btnStdProf_Click(object sender, EventArgs e)
         {
-            Hide();
-            AllStudentsData form2 = new AllStudentsData();
-            form2.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form2.WindowState = FormWindowState.Maximized;
-            }
-            form2.Show();
+            NavigateTo.To<AllStudentsData>(this);
         }
 
         private void btnAttend_Click(object sender, EventArgs e)
         {
-            Hide();
-            CheckAttendence form3 = new CheckAttendence();
-            form3.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form3.WindowState = FormWindowState.Maximized;
-            }
-            form3.Show();
+            NavigateTo.To<CheckAttendence>(this);
         }
 
         private void btnClsFees_Click(object sender, EventArgs e)
         {
-            Hide();
-            ClassFees form4 = new ClassFees();
-            form4.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form4.WindowState = FormWindowState.Maximized;
-            }
-            form4.Show();
+            NavigateTo.To<ClassFees>(this);
         }
 
         private void btnTutProf_Click(object sender, EventArgs e)
         {
-            Hide();
-            AllTutorsData form5 = new AllTutorsData();
-            form5.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form5.WindowState = FormWindowState.Maximized;
-            }
-            form5.Show();
+            NavigateTo.To<AllStudentsData>(this);
         }
 
         private void btnSchedules_Click(object sender, EventArgs e)
         {
-            Hide();
-            Schedules form6 = new Schedules();
-            form6.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form6.WindowState = FormWindowState.Maximized;
-            }
-            form6.Show();
+            NavigateTo.To<AllSchedules>(this);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Hide();
-            LoginForm form7 = new LoginForm();
-            form7.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                form7.WindowState = FormWindowState.Maximized;
-            }
-            form7.Show();
+            NavigateTo.To<LoginForm>(this);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -113,14 +66,7 @@ namespace TutorHQ
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Hide();
-            Dashboard dashboard = new Dashboard();
-            dashboard.Closed += (s, args) => this.Close();
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                dashboard.WindowState = FormWindowState.Maximized;
-            }
-            dashboard.Show();
+            NavigateTo.To<Dashboard>(this);
         }
 
         private void Dashboard_Load(object sender, EventArgs e)

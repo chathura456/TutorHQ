@@ -105,6 +105,7 @@
             this.Fess = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.panel36.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel38.SuspendLayout();
@@ -122,6 +123,7 @@
             this.panel42.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panel27.SuspendLayout();
@@ -614,6 +616,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Controls.Add(this.panel18);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -985,6 +988,18 @@
             this.Column2.Text = "Delete";
             this.Column2.UseColumnTextForButtonValue = true;
             // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel18.BackgroundImage = global::TutorHQ.Properties.Resources.TutorHQHigh;
+            this.panel18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Margin = new System.Windows.Forms.Padding(2);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(186, 73);
+            this.panel18.TabIndex = 1;
+            // 
             // Add_Tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1028,6 +1043,7 @@
             this.panel42.PerformLayout();
             this.panel20.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
@@ -1136,5 +1152,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.Button add_class;
         private System.Windows.Forms.ComboBox type_dropdown;
+        private System.Windows.Forms.Panel panel18;
     }
 }

@@ -33,7 +33,6 @@ D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignm
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Attendence.CheckAttendence.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Class_Fess.ClassFees.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Edit_Schedule.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Schedules.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.Add_Student.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.Add_Tutor.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.AllTutorsData.resources
@@ -44,3 +43,4 @@ D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignm
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.pdb
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.AllStudentsData.resources
 D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.Student_Proile.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.AllSchedules.resources

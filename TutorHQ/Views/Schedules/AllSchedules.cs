@@ -11,9 +11,9 @@ using TutorHQ.Views.Tutor_Data;
 
 namespace TutorHQ.Views.Schedules
 {
-    public partial class Schedules : Form
+    public partial class AllSchedules : Form
     {
-        public Schedules()
+        public AllSchedules()
         {
             InitializeComponent();
         }
@@ -40,6 +40,11 @@ namespace TutorHQ.Views.Schedules
                 form.WindowState = FormWindowState.Maximized;
             }
             form.Show();
+        }
+
+        private void Schedules_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

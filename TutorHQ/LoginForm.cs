@@ -38,58 +38,20 @@ namespace TutorHQ
             else
             {
 
+                var uname = txtName.Text.ToString().Trim();
+                var pass = txtPass.Text.ToString().Trim();
 
-                string connetionString;
-                SqlConnection cnn;
-                //connetionString = @"Data Source=DESKTOP-8AQ5791;Initial Catalog=hospital_management;Integrated Security=True";
-                connetionString = @"Data Source=tutorhqserver.database.windows.net;Initial Catalog=TutorHQdb;User ID=tutorhq;password=MasterDB@2023;";
-                cnn = new SqlConnection(connetionString);
-                try
+                Users user = LoginControllers.LoginUser(uname, pass);
+                CurrentUser.LoginSuccess = user.LoginSuccess;
+                CurrentUser.Name = user.Name;
+                if (user.LoginSuccess)
                 {
-                    /*  cnn.Open();
-                      MessageBox.Show("Connection Open  !");
-                      string query = "SELECT * FROM Users WHERE Email=@email and Password=@password";
-                      SqlCommand cmd = new SqlCommand(query,cnn);
-                      cmd.Connection = cnn;
-                      cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = "natasha@gmail.com";
-                      cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = "1234";
-                      cmd.CommandType = CommandType.Text;*/
-
-                    cnn.Open();
-                    //MessageBox.Show("Connection Open  !");
-                    string query = "SELECT * FROM Users WHERE User_Name=@email and Password=@password";
-                    SqlCommand cmd = new SqlCommand(query, cnn);
-                    cmd.Connection = cnn;
-                    cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = txtName.Text.ToString();
-                    cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = txtPass.Text.ToString();
-                    cmd.CommandType = CommandType.Text;
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.Read())
-                        {
-                            MessageBox.Show("Login Success");
-                            NavigateTo.To<Dashboard>(this);
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Login Failed ");
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ExecuteNonQuery Error! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                    cnn.Close();
+                    MessageBox.Show("You're Successfully Login to TuturHQ" , "Login Success!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    NavigateTo.To<Dashboard>(this);
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("MySQL Connection! \n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Query Not Execute");
                 }
 
 

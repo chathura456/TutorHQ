@@ -176,7 +176,6 @@ namespace TutorHQ.Controllers
             {
                 using (SqlConnection connection = GetConnection())
                 {
-                    connection.Open();
 
                     string sql = "SELECT * FROM Tutor";
 

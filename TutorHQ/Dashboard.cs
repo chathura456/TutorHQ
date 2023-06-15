@@ -46,7 +46,7 @@ namespace TutorHQ
 
         private void btnTutProf_Click(object sender, EventArgs e)
         {
-            NavigateTo.To<AllStudentsData>(this);
+            NavigateTo.To<AllTutorsData>(this);
         }
 
         private void btnSchedules_Click(object sender, EventArgs e)

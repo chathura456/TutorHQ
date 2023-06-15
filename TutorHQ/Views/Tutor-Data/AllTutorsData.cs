@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TutorHQ.Controllers;
+using TutorHQ.Models;
 
 namespace TutorHQ.Views.Tutor_Data
 {
@@ -19,7 +21,23 @@ namespace TutorHQ.Views.Tutor_Data
 
         private void AllTutorsData_Load(object sender, EventArgs e)
         {
+            List<Tutor> tutors = TutorControllers.GetAllTutors();
 
+            dataGridView1.Columns.Clear(); // Clear existing columns if any
+            
+            //profile view column
+            DataGridViewButtonColumn profileColumn = new DataGridViewButtonColumn();
+            profileColumn.HeaderText = "View Profile";
+            profileColumn.Text = "View";
+            profileColumn.UseColumnTextForButtonValue = true;
+
+            dataGridView1.Columns.Add("Tutor_ID", "Tutor ID");
+            dataGridView1.Columns.Add("Tutor_Name", "Tutor Name");
+            dataGridView1.Columns.Add("Tutor_Phone", "Tutor Phone");
+            dataGridView1.Columns.Add("Sub_ID", "Subject ID");
+            dataGridView1.Columns.Add(profileColumn);
+
+            dataGridView1.DataSource = tutors;
         }
 
         private void btnBack_Click(object sender, EventArgs e)

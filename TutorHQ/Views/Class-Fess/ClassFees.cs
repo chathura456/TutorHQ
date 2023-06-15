@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -20,6 +21,7 @@ namespace TutorHQ.Views.Class_Fess
         public ClassFees()
         {
             InitializeComponent();
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -123,7 +125,32 @@ namespace TutorHQ.Views.Class_Fess
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["cn"].ConnectionString))
+                {
+                    if (cn.State == ConnectionState.Closed)
+                        cn.Open();
+                    using(DataTable dt = new DataTable("Student"))
+                    {
+                        using(SqlCommand cmd = new SqlCommand("select * from Fees where St_ID=@St_ID",cn))
+                        {
+                            //cmd.Parameters.AddWithValue("Month1", Month1.ValueType);
+                            cmd.Parameters.AddWithValue("St_ID", textBox1.Text);
+                            //cmd.Parameters.AddWithValue("Month1", string.Format("%{0}%", textBox1.Text));
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            adapter.Fill(dt);
+                            dataGridView1.DataSource = dt;
+                            lblTotal.Text = $"Total records: {dataGridView1.RowCount}";
 
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -138,5 +165,32 @@ namespace TutorHQ.Views.Class_Fess
         {
             FeesController.GetPaymentDetails(dataGridView1);
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true; // Prevent the Enter key character from being entered in the TextBox
+                string enteredText = textBox1.Text;
+
+                // Add the entered text to a new row in the DataGridView
+                dataGridView1.Rows.Add(enteredText);
+
+                // Clear the TextBox after adding the data
+                textBox1.Clear();
+            }
+        }
+
+
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            FeesController.GetPaymentDetails(dataGridView1);
+        }
     }
-}
+    }
+

@@ -8,14 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
+using TutorHQ.Models;
 using TutorHQ.Views.Class_Fess;
 using TutorHQ.Views.Student_Data;
 using TutorHQ.Views.Tutor_Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TutorHQ.Views.Attendence
 {
     public partial class CheckAttendence : Form
+
+
     {
+
         public CheckAttendence()
         {
             InitializeComponent();
@@ -45,13 +50,59 @@ namespace TutorHQ.Views.Attendence
             dashboard.Show();
         }
 
+        /* private void button1_Click(object sender, EventArgs e)
+         {
+             string studentID = textBox1.Text;
+             string classID = textBox2.Text;
+             string month = comboBox1.Text;
+
+
+
+             AttendanceDetails attendence = AttendenceControllers.GetAttendanceDetailsByStudent(studentID, classID, month);
+
+
+             dataGridView1.Rows.Clear();
+             if (attendence != null)
+             {
+                 dataGridView1.Rows.Add(attendence.StudentID, attendence.Status, attendence.Time);
+             }
+             else
+             {
+                 MessageBox.Show("Student Not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+         }
+
+
+         */
         private void button1_Click(object sender, EventArgs e)
         {
+            if (int.TryParse(textBox1.Text, out int studentID))
+            {
+                string classID = textBox1.Text;
+                string month = comboBox1.Text;
 
-            /*string name = textBox1.Text;
-            AttendenceControllers.GetAttendanceDetails("SELECT studentID, date1, time1 FROM Attendence", dataGridView1);
-            textBox1.Clear();*/
+                List<AttendanceDetails> attendanceList = AttendenceControllers.GetAttendanceDetailsByStudent(studentID, month, classID);
+
+                dataGridView1.Rows.Clear();
+
+                if (attendanceList.Count > 0)
+                {
+                    foreach (AttendanceDetails attendance in attendanceList)
+                    {
+                        dataGridView1.Rows.Add(attendance.StudentID);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Student Not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid Student ID!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -163,6 +214,13 @@ namespace TutorHQ.Views.Attendence
                 form7.WindowState = FormWindowState.Maximized;
             }
             form7.Show();
+        }
+
+       
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            AttendenceControllers.GetAttendanceDetails(dataGridView1);
         }
     }
 } 

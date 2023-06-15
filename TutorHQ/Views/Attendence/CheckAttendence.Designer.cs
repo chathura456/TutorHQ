@@ -35,7 +35,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.St_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -46,33 +52,29 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.time1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.St_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // addAtten
             // 
             this.addAtten.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.addAtten.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addAtten.Location = new System.Drawing.Point(1015, 202);
-            this.addAtten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addAtten.Location = new System.Drawing.Point(1045, 293);
+            this.addAtten.Margin = new System.Windows.Forms.Padding(4);
             this.addAtten.Name = "addAtten";
             this.addAtten.Size = new System.Drawing.Size(81, 40);
             this.addAtten.TabIndex = 17;
@@ -116,7 +118,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(795, 212);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 30);
+            this.button1.Size = new System.Drawing.Size(90, 32);
             this.button1.TabIndex = 30;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
@@ -131,7 +133,7 @@
             this.label2.Location = new System.Drawing.Point(335, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(332, 40);
+            this.label2.Size = new System.Drawing.Size(324, 38);
             this.label2.TabIndex = 27;
             this.label2.Text = "Student Attendence";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -154,6 +156,34 @@
             this.dataGridView1.TabIndex = 33;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // date1
+            // 
+            this.date1.HeaderText = "Date";
+            this.date1.MinimumWidth = 6;
+            this.date1.Name = "date1";
+            this.date1.Width = 125;
+            // 
+            // time1
+            // 
+            this.time1.HeaderText = "Time";
+            this.time1.MinimumWidth = 6;
+            this.time1.Name = "time1";
+            this.time1.Width = 125;
+            // 
+            // Class_ID
+            // 
+            this.Class_ID.HeaderText = "Class ID";
+            this.Class_ID.MinimumWidth = 6;
+            this.Class_ID.Name = "Class_ID";
+            this.Class_ID.Width = 125;
+            // 
+            // St_ID
+            // 
+            this.St_ID.HeaderText = "Student ID";
+            this.St_ID.MinimumWidth = 6;
+            this.St_ID.Name = "St_ID";
+            this.St_ID.Width = 125;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(76)))));
@@ -172,6 +202,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(249, 816);
             this.panel1.TabIndex = 36;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(92, 410);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Tutor";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 406);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -289,6 +342,15 @@
             this.panel2.Size = new System.Drawing.Size(1311, 58);
             this.panel2.TabIndex = 37;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 55);
+            this.panel3.TabIndex = 18;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -299,57 +361,6 @@
             this.label7.Size = new System.Drawing.Size(121, 27);
             this.label7.TabIndex = 4;
             this.label7.Text = "TutorHQ";
-            // 
-            // date1
-            // 
-            this.date1.HeaderText = "Date";
-            this.date1.MinimumWidth = 6;
-            this.date1.Name = "date1";
-            this.date1.Width = 125;
-            // 
-            // time1
-            // 
-            this.time1.HeaderText = "Time";
-            this.time1.MinimumWidth = 6;
-            this.time1.Name = "time1";
-            this.time1.Width = 125;
-            // 
-            // Class_ID
-            // 
-            this.Class_ID.HeaderText = "Class ID";
-            this.Class_ID.MinimumWidth = 6;
-            this.Class_ID.Name = "Class_ID";
-            this.Class_ID.Width = 125;
-            // 
-            // St_ID
-            // 
-            this.St_ID.HeaderText = "Student ID";
-            this.St_ID.MinimumWidth = 6;
-            this.St_ID.Name = "St_ID";
-            this.St_ID.Width = 125;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 406);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 29);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(92, 410);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 25);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Tutor";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -363,14 +374,17 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // panel3
+            // pictureBox3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(245, 55);
-            this.panel3.TabIndex = 18;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(905, 215);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(30, 29);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 18;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // CheckAttendence
             // 
@@ -378,6 +392,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1312, 814);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -385,7 +400,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.addAtten);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1330, 861);
             this.Name = "CheckAttendence";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -394,16 +409,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,5 +452,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

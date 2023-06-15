@@ -98,6 +98,40 @@ namespace TutorHQ.Controllers
             }
         }
 
+        //get student details by id to Student class
+        public static Student GetStudentDetailsByIDSearch(String id)
+        {
+            Student student = new Student();
+            SqlConnection conn = GetConnection();
+            string sql = "SELECT * FROM Student WHERE Student_ID = @id;";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", int.Parse(id));
+            SqlDataReader reader = cmd.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    student.Student_ID = Convert.ToInt32(reader["Student_ID"]);
+
+                    student.St_Name = reader["St_Name"].ToString();
+                    student.Gender = reader["Gender"].ToString();
+                    student.NIC = reader["NIC"].ToString();
+                    student.Phone_NO = Convert.ToInt32(reader["Phone_NO"]);
+                    student.Parent_Name = reader["Parent_Name"].ToString();
+                    student.Parent_Relation = reader["Parent_Relation"].ToString();
+                    student.Parent_Phone = reader["Parent_Phone"] != DBNull.Value ? Convert.ToInt32(reader["Parent_Phone"]) : (int?)null;
+                    student.Select_Subjects = reader["Select_Subjects"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Student Not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            reader.Close();
+            conn.Close();
+
+            return student;
+        }
 
 
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
+using TutorHQ.Models;
 
 namespace TutorHQ.Views.Student_Data
 {
@@ -91,6 +92,40 @@ namespace TutorHQ.Views.Student_Data
                 }
                 dashboard.Show();
             }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Add_Student form = new Add_Student();
+            form.Closed += (s, args) => this.Close();
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                form.WindowState = FormWindowState.Maximized;
+            }
+            form.Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string studentID = textBox1.Text;
+            Student student = StudentControllers.GetStudentDetailsByIDSearch(studentID);
+               
+
+            dataGridView1.Rows.Clear();
+            if (student != null)
+            {
+                dataGridView1.Rows.Add(student.Student_ID, student.St_Name, student.Gender, student.NIC, student.Phone_NO, student.Parent_Name, student.Parent_Relation, student.Parent_Phone, student.Select_Subjects);
+            }
+            else
+            {
+                MessageBox.Show("Student Not Found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

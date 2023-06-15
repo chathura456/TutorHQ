@@ -37,9 +37,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(399, 186);
+            this.label1.Location = new System.Drawing.Point(532, 229);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 37);
+            this.label1.Size = new System.Drawing.Size(250, 46);
             this.label1.TabIndex = 11;
             this.label1.Text = "Add Student";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -48,9 +49,10 @@
             // 
             this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(419, 274);
+            this.btnBack.Location = new System.Drawing.Point(559, 337);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(185, 40);
+            this.btnBack.Size = new System.Drawing.Size(247, 49);
             this.btnBack.TabIndex = 12;
             this.btnBack.Text = "back to dashboard";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -58,11 +60,12 @@
             // 
             // Add_Student
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(1312, 814);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Add_Student";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Student";

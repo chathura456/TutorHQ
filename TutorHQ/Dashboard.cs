@@ -105,5 +105,22 @@ namespace TutorHQ
             }
             form7.Show();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Dashboard dashboard = new Dashboard();
+            dashboard.Closed += (s, args) => this.Close();
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                dashboard.WindowState = FormWindowState.Maximized;
+            }
+            dashboard.Show();
+        }
     }
 }

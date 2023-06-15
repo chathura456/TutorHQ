@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TutorHQ.Models;
 
 namespace TutorHQ.Controllers
 {
     public class FeesController : DBconnection
     {
+        public object Con { get; private set; }
+
         //get all fees details by month for a class
         public static List<StudentPaymentDetails> GetPaymentDetailsByMonth(string month)
         {
@@ -64,6 +69,8 @@ namespace TutorHQ.Controllers
 
 
 
+
+
         //get all fees details by student
         public static List<StudentPaymentDetails> GetPaymentDetailsByStudentID(int studentID)
         {
@@ -114,6 +121,42 @@ namespace TutorHQ.Controllers
 
             return paymentList;
         }
+
+
+
+
+        public static void GetPaymentDetails(DataGridView dgv)
+        {
+            using (SqlConnection conn = GetConnection())
+            {
+                string sql = "SELECT * FROM Fees";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                string column1 = reader.IsDBNull(0) ? string.Empty : reader.GetInt32(0).ToString();
+                                string column2 = reader.IsDBNull(1) ? string.Empty : reader.GetInt32(1).ToString();
+                                string column3 = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                                string column4 = reader.IsDBNull(3) ? string.Empty : reader.GetString(3);
+                                string column5 = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
+
+                                dgv.Rows.Add(column1, column2, column3, column4, column5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+       
+
+
+
+
 
         //give student stails for a month
         public static List<StudentPaymentDetails> GetPaymentDetailsByStudentIDAndMonth(int studentID, string month)

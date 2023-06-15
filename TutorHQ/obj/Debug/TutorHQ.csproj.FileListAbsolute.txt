@@ -1,23 +1,3 @@
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe.config
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.pdb
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.AssemblyReference.cache
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.SuggestedBindingRedirects.cache
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Properties.Resources.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.GenerateResource.cache
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.CoreCompileInputs.cache
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.exe
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.pdb
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.LoginForm.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Dashboard.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Attendence.AddAttendence.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Attendence.CheckAttendence.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Class_Fess.ClassFees.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.Add_Tutor.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.AllTutorsData.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.Tutor_Profile.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Edit_Schedule.resources
-D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Schedules.resources
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe.config
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\bin\Debug\TutorHQ.pdb
@@ -41,3 +21,26 @@ C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.GenerateR
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.CoreCompileInputs.cache
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\obj\Debug\TutorHQ.exe
 C:\Users\Samindi\Source\Repos\TutorHQ\TutorHQ\obj\Debug\TutorHQ.pdb
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe.config
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.exe
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\bin\Debug\TutorHQ.pdb
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.AssemblyReference.cache
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.SuggestedBindingRedirects.cache
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Dashboard.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.LoginForm.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Properties.Resources.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Attendence.AddAttendence.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Attendence.CheckAttendence.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Class_Fess.ClassFees.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Edit_Schedule.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Schedules.Schedules.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.Add_Student.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.Add_Tutor.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.AllTutorsData.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Tutor_Data.Tutor_Profile.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.GenerateResource.cache
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.csproj.CoreCompileInputs.cache
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.exe
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.pdb
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.AllStudentsData.resources
+D:\Campus\Year 03 Semester 01\Advanced Database Management Systems\Final Assignment\TutorHQ\TutorHQ\TutorHQ\obj\Debug\TutorHQ.Views.Student_Data.Student_Proile.resources

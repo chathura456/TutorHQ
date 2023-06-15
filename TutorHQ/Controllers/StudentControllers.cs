@@ -114,7 +114,7 @@ namespace TutorHQ.Controllers
             {
                 while (reader.Read())
                 {
-                    student.Student_ID = Convert.ToInt32(reader["St_ID"]);
+                   // student.Student_ID = Convert.ToInt32(reader["St_ID"]);
                     student.St_Name = reader["St_Name"].ToString();
                     student.Gender = reader["Gender"].ToString();
                     student.NIC = reader["NIC"].ToString();

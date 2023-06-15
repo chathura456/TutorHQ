@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using TutorHQ.Views.Attendence;
 using TutorHQ.Views.Class_Fess;
 using TutorHQ.Views.Schedules;
+using TutorHQ.Views.Student_Data;
 using TutorHQ.Views.Tutor_Data;
 
 namespace TutorHQ
@@ -23,26 +24,26 @@ namespace TutorHQ
 
         private void btnAddStd_Click(object sender, EventArgs e)
         {
-           /* Hide();
+           Hide();
             Add_Student form= new Add_Student();
             form.Closed += (s, args) => this.Close();
             if (this.WindowState == FormWindowState.Maximized)
             {
                 form.WindowState = FormWindowState.Maximized;
             }
-            form.Show();*/
+            form.Show();
         }
 
         private void btnStdProf_Click(object sender, EventArgs e)
         {
-            /*Hide();
+            Hide();
             AllStudentsData form2 = new AllStudentsData();
             form2.Closed += (s, args) => this.Close();
             if (this.WindowState == FormWindowState.Maximized)
             {
                 form2.WindowState = FormWindowState.Maximized;
             }
-            form2.Show();*/
+            form2.Show();
         }
 
         private void btnAttend_Click(object sender, EventArgs e)
@@ -120,6 +121,11 @@ namespace TutorHQ
                 dashboard.WindowState = FormWindowState.Maximized;
             }
             dashboard.Show();
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

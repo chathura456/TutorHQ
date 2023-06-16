@@ -100,12 +100,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fess = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel36.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel38.SuspendLayout();
@@ -276,6 +270,7 @@
             this.stream_gropdown.Name = "stream_gropdown";
             this.stream_gropdown.Size = new System.Drawing.Size(134, 21);
             this.stream_gropdown.TabIndex = 2;
+            this.stream_gropdown.SelectedIndexChanged += new System.EventHandler(this.stream_gropdown_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -351,6 +346,7 @@
             this.add_class.TabIndex = 0;
             this.add_class.Text = "Add Class";
             this.add_class.UseVisualStyleBackColor = true;
+            this.add_class.Click += new System.EventHandler(this.add_class_Click);
             // 
             // panel47
             // 
@@ -372,6 +368,7 @@
             this.save_btn.TabIndex = 1;
             this.save_btn.Text = "Save";
             this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // panel37
             // 
@@ -767,6 +764,7 @@
             this.button7.Size = new System.Drawing.Size(63, 73);
             this.button7.TabIndex = 13;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // panel25
             // 
@@ -960,51 +958,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Class_ID,
-            this.Subject_Name,
-            this.Type,
-            this.Fess,
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(233, 386);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(640, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(449, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Class_ID
-            // 
-            this.Class_ID.HeaderText = "Class_ID";
-            this.Class_ID.Name = "Class_ID";
-            // 
-            // Subject_Name
-            // 
-            this.Subject_Name.HeaderText = "Subject_Name";
-            this.Subject_Name.Name = "Subject_Name";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            // 
-            // Fess
-            // 
-            this.Fess.HeaderText = "Fess";
-            this.Fess.Name = "Fess";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Edit";
-            this.Column1.UseColumnTextForButtonValue = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Delete";
-            this.Column2.UseColumnTextForButtonValue = true;
             // 
             // Add_Tutor
             // 
@@ -1027,6 +984,7 @@
             this.Name = "Add_Tutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add_Tutor";
+            this.Load += new System.EventHandler(this.Add_Tutor_Load);
             this.panel36.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
@@ -1150,12 +1108,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel40;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Class_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fess;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.Button add_class;
         private System.Windows.Forms.ComboBox type_dropdown;
         private System.Windows.Forms.Panel panel18;

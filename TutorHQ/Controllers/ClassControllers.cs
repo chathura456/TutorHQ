@@ -89,6 +89,80 @@ namespace TutorHQ.Controllers
             }
             return classList;
         }
+
+        //get all streams
+        public static List<Subject> GetAllStreams()
+        {
+            List<Subject> streamList = new List<Subject>();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    string sql = "SELECT DISTINCT Stream FROM Subject";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Subject subject = new Subject
+                                {
+                                    Stream = reader["Stream"].ToString()
+                                };
+
+                                streamList.Add(subject);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while retrieving stream details: " + ex.Message);
+            }
+
+            return streamList;
+        }
+
+        //get all subjects by stream
+        public static List<Subject> getAllSubjectsByStream(string stream)
+        {
+            List<Subject> streamList = new List<Subject>();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    string sql = "SELECT * FROM Subject where Stream = @stream";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@stream", stream);
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Subject subject = new Subject
+                                {
+                                    Sub_Name = reader["Sub_Name"].ToString(),
+                                    Sub_ID = reader["Sub_ID"].ToString(),
+                                };
+
+                                streamList.Add(subject);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while retrieving stream details: " + ex.Message);
+            }
+
+            return streamList;
+        }
        
 
     }

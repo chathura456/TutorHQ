@@ -30,6 +30,24 @@ namespace TutorHQ.Models
         public string Stream { get; set; }
     }
 
+    public class ListItem
+    {
+        public string DisplayText { get; set; }
+        public string Value { get; set; }
+
+        public ListItem(string displayText, string value)
+        {
+            DisplayText = displayText;
+            Value = value;
+        }
+
+        public override string ToString()
+        {
+            return DisplayText;
+        }
+    }
+
+
     public class Tutor
     {
         public int Tutor_ID { get; set; }

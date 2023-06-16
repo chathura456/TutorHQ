@@ -22,7 +22,7 @@ namespace TutorHQ.Controllers
                 {
 
                     // Add the tutor to the Tutor table
-                    string tutorSql = "INSERT INTO Tutor (Tutor_Name, Tutor_Phone, Sub_ID) VALUES (@name, @phone, @subID)";
+                    string tutorSql = "INSERT INTO Tutor (Tutor_Name, Tutor_Phone, Sub_ID) VALUES (@name, @phone, @subID); SELECT SCOPE_IDENTITY();";
 
                     using (SqlCommand tutorCommand = new SqlCommand(tutorSql, connection))
                     {
@@ -31,42 +31,50 @@ namespace TutorHQ.Controllers
                         tutorCommand.Parameters.AddWithValue("@subID", tutor.Sub_ID);
 
                         tutorCommand.ExecuteNonQuery();
+
+                        int tutorID;
+                        tutorID = int.Parse(tutorCommand.ExecuteScalar().ToString());
+                      
+
+                        // Add the classes to the Class table
+                        foreach (Class classItem in classes)
+                        {
+                            string classSql = "INSERT INTO Class (Class_ID, Type, Fess_Amount, Tut_ID) VALUES (@classID, @type, @amount, @tutorID)";
+
+                            using (SqlCommand classCommand = new SqlCommand(classSql, connection))
+                            {
+                                classCommand.Parameters.AddWithValue("@classID", classItem.Class_ID);
+                                classCommand.Parameters.AddWithValue("@type", classItem.Type);
+                                classCommand.Parameters.AddWithValue("@amount", classItem.Fess_Amount);
+                                classCommand.Parameters.AddWithValue("@tutorID", tutorID);
+
+                                classCommand.ExecuteNonQuery();
+                            }
+                        }
                     }
 
                     // Retrieve the generated Tutor_ID
-                    string tutorIdSql = "SELECT SCOPE_IDENTITY()";
+                    //string tutorIdSql = "SELECT SCOPE_IDENTITY()";
+                    
 
-                    int tutorID;
-
-                    using (SqlCommand tutorIdCommand = new SqlCommand(tutorIdSql, connection))
+                   /* using (SqlCommand tutorIdCommand = new SqlCommand(tutorIdSql, connection))
                     {
-                        tutorID = Convert.ToInt32(tutorIdCommand.ExecuteScalar());
-                    }
+                        
+                    }*/
 
-                    // Add the classes to the Class table
-                    foreach (Class classItem in classes)
-                    {
-                        string classSql = "INSERT INTO Class (Class_ID, Type, Fess_Amount, Tut_ID) VALUES (@classID, @type, @amount, @tutorID)";
-
-                        using (SqlCommand classCommand = new SqlCommand(classSql, connection))
-                        {
-                            classCommand.Parameters.AddWithValue("@classID", classItem.Class_ID);
-                            classCommand.Parameters.AddWithValue("@type", classItem.Type);
-                            classCommand.Parameters.AddWithValue("@amount", classItem.Fess_Amount);
-                            classCommand.Parameters.AddWithValue("@tutorID", tutorID);
-
-                            classCommand.ExecuteNonQuery();
-                        }
-                    }
+                    
                 }
 
                 Console.WriteLine("Tutor and classes added successfully!");
+                MessageBox.Show("Tutor and classes added successfully!");
             }
             catch (Exception ex)
             {
                 Console.WriteLine("An error occurred while adding the tutor and classes: " + ex.Message);
             }
         }
+
+          
 
 
         //update tutor and classes

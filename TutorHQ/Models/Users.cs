@@ -36,7 +36,6 @@ namespace TutorHQ.Models
         public string Tutor_Name { get; set; }
         public int Tutor_Phone { get; set; }
         public string Sub_ID { get; set; }
-        public Subject Subject { get; set; }
     }
 
     public class Class
@@ -44,8 +43,6 @@ namespace TutorHQ.Models
         public string Class_ID { get; set; }
         public string Type { get; set; }
         public int Fess_Amount { get; set; }
-        public int Tut_ID { get; set; }
-        public Tutor Tutor { get; set; }
     }
 
     public class Student

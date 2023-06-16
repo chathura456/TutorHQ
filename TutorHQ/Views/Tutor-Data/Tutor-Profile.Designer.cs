@@ -30,24 +30,18 @@
         {
             this.panel32 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.lblStream = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Class_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fess = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -60,7 +54,7 @@
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblSubject = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -71,6 +65,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -81,14 +76,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel10.SuspendLayout();
+            this.lblStream.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -133,15 +127,15 @@
             this.panel27.Size = new System.Drawing.Size(109, 31);
             this.panel27.TabIndex = 22;
             // 
-            // panel10
+            // lblStream
             // 
-            this.panel10.Controls.Add(this.label18);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(127, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(282, 31);
-            this.panel10.TabIndex = 21;
+            this.lblStream.Controls.Add(this.label18);
+            this.lblStream.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblStream.Location = new System.Drawing.Point(127, 0);
+            this.lblStream.Margin = new System.Windows.Forms.Padding(2);
+            this.lblStream.Name = "lblStream";
+            this.lblStream.Size = new System.Drawing.Size(282, 31);
+            this.lblStream.TabIndex = 21;
             // 
             // label18
             // 
@@ -201,7 +195,7 @@
             // 
             // panel21
             // 
-            this.panel21.Controls.Add(this.label16);
+            this.panel21.Controls.Add(this.lblPhone);
             this.panel21.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel21.Location = new System.Drawing.Point(127, 0);
             this.panel21.Margin = new System.Windows.Forms.Padding(2);
@@ -209,18 +203,18 @@
             this.panel21.Size = new System.Drawing.Size(282, 31);
             this.panel21.TabIndex = 21;
             // 
-            // label16
+            // lblPhone
             // 
-            this.label16.AutoSize = true;
-            this.label16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label16.Location = new System.Drawing.Point(0, 0);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
-            this.label16.Size = new System.Drawing.Size(37, 23);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "test";
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblPhone.Location = new System.Drawing.Point(0, 0);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
+            this.lblPhone.Size = new System.Drawing.Size(37, 23);
+            this.lblPhone.TabIndex = 2;
+            this.lblPhone.Text = "test";
             // 
             // panel22
             // 
@@ -257,52 +251,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Class_ID,
-            this.Subject_Name,
-            this.Type,
-            this.Fess,
-            this.Column1,
-            this.Column2});
             this.dataGridView1.Location = new System.Drawing.Point(101, 7);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(640, 150);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(345, 150);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // Class_ID
-            // 
-            this.Class_ID.HeaderText = "Class_ID";
-            this.Class_ID.Name = "Class_ID";
-            // 
-            // Subject_Name
-            // 
-            this.Subject_Name.HeaderText = "Subject_Name";
-            this.Subject_Name.Name = "Subject_Name";
-            // 
-            // Type
-            // 
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            // 
-            // Fess
-            // 
-            this.Fess.HeaderText = "Fess";
-            this.Fess.Name = "Fess";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.Text = "Edit";
-            this.Column1.UseColumnTextForButtonValue = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.Text = "Delete";
-            this.Column2.UseColumnTextForButtonValue = true;
             // 
             // panel30
             // 
@@ -357,6 +313,7 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Back";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -423,7 +380,7 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.label19);
+            this.panel13.Controls.Add(this.lblSubject);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel13.Location = new System.Drawing.Point(127, 0);
             this.panel13.Margin = new System.Windows.Forms.Padding(2);
@@ -431,18 +388,18 @@
             this.panel13.Size = new System.Drawing.Size(282, 31);
             this.panel13.TabIndex = 21;
             // 
-            // label19
+            // lblSubject
             // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label19.Location = new System.Drawing.Point(0, 0);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
-            this.label19.Size = new System.Drawing.Size(88, 23);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "0769307178";
+            this.lblSubject.AutoSize = true;
+            this.lblSubject.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblSubject.Location = new System.Drawing.Point(0, 0);
+            this.lblSubject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
+            this.lblSubject.Size = new System.Drawing.Size(88, 23);
+            this.lblSubject.TabIndex = 2;
+            this.lblSubject.Text = "0769307178";
             // 
             // panel14
             // 
@@ -471,7 +428,7 @@
             // 
             this.panel9.Controls.Add(this.panel32);
             this.panel9.Controls.Add(this.panel27);
-            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.lblStream);
             this.panel9.Controls.Add(this.panel11);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(186, 186);
@@ -498,6 +455,7 @@
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -517,6 +475,7 @@
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -536,6 +495,7 @@
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -555,6 +515,7 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -574,6 +535,7 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -593,6 +555,7 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -605,6 +568,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 73);
             this.panel2.TabIndex = 0;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panel16.BackgroundImage = global::TutorHQ.Properties.Resources.TutorHQHigh;
+            this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(2);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(186, 73);
+            this.panel16.TabIndex = 1;
             // 
             // label3
             // 
@@ -709,7 +684,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label13);
+            this.panel8.Controls.Add(this.lblName);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(127, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(2);
@@ -717,18 +692,18 @@
             this.panel8.Size = new System.Drawing.Size(282, 31);
             this.panel8.TabIndex = 21;
             // 
-            // label13
+            // lblName
             // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
-            this.label13.Size = new System.Drawing.Size(37, 23);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "test";
+            this.lblName.AutoSize = true;
+            this.lblName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblName.Location = new System.Drawing.Point(0, 0);
+            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Padding = new System.Windows.Forms.Padding(11, 8, 0, 0);
+            this.lblName.Size = new System.Drawing.Size(37, 23);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "test";
             // 
             // panel7
             // 
@@ -794,18 +769,6 @@
             this.panel1.Size = new System.Drawing.Size(186, 561);
             this.panel1.TabIndex = 36;
             // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panel16.BackgroundImage = global::TutorHQ.Properties.Resources.TutorHQHigh;
-            this.panel16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(186, 73);
-            this.panel16.TabIndex = 1;
-            // 
             // Tutor_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -825,8 +788,9 @@
             this.Name = "Tutor_Profile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tutor_Profile";
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.Load += new System.EventHandler(this.Tutor_Profile_Load);
+            this.lblStream.ResumeLayout(false);
+            this.lblStream.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel21.ResumeLayout(false);
@@ -869,14 +833,14 @@
 
         private System.Windows.Forms.Panel panel32;
         private System.Windows.Forms.Panel panel27;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel lblStream;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Panel panel22;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel15;
@@ -892,7 +856,7 @@
         private System.Windows.Forms.Panel panel40;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel9;
@@ -913,19 +877,13 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Class_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject_Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fess;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.Panel panel16;
     }
 }

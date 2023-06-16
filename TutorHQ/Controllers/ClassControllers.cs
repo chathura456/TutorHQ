@@ -19,8 +19,6 @@ namespace TutorHQ.Controllers
             {
                 using (SqlConnection connection = GetConnection())
                 {
-                    connection.Open();
-
                     string sql = "SELECT c.Class_ID, t.Tutor_Name, s.Sub_Name, c.Type FROM Class c INNER JOIN Tutor t ON c.Tut_ID = t.Tutor_ID INNER JOIN Subject s ON c.Sub_ID = s.Sub_ID";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -50,6 +48,48 @@ namespace TutorHQ.Controllers
 
             return classList;
         }
+
+        //get class details by tutor id
+        public static List<Class> getGlassByTutorID(int id)
+        {
+            List<Class> classList = new List<Class>();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+                    string sql = "select * from Class where Tut_ID = @id";
+
+                    using (SqlCommand tutorCommand = new SqlCommand(sql, connection))
+                    {
+                        tutorCommand.Parameters.AddWithValue("@id", id);
+
+                        //tutorCommand.ExecuteNonQuery();
+                        using (SqlDataReader reader = tutorCommand.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Class class1 = new Class
+                                {
+                                    Class_ID = reader["Class_ID"].ToString(),
+                                    Type = reader["Type"].ToString(),
+                                    Fess_Amount = int.Parse(reader["Fess_Amount"].ToString())
+                                };
+
+                                classList.Add(class1);
+                            }
+                        }
+                    }
+
+                }
+
+            }catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while retrieving class details: " + ex.Message);
+            }
+            return classList;
+        }
+       
 
     }
 }

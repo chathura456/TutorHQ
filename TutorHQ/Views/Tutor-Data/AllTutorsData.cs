@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TutorHQ.Controllers;
 using TutorHQ.Models;
+using TutorHQ.Navigation;
+using TutorHQ.Views.Attendence;
+using TutorHQ.Views.Class_Fess;
+using TutorHQ.Views.Schedules;
+using TutorHQ.Views.Student_Data;
 
 namespace TutorHQ.Views.Tutor_Data
 {
@@ -22,22 +27,17 @@ namespace TutorHQ.Views.Tutor_Data
         private void AllTutorsData_Load(object sender, EventArgs e)
         {
             List<Tutor> tutors = TutorControllers.GetAllTutors();
+            
 
             dataGridView1.Columns.Clear(); // Clear existing columns if any
-            
+            dataGridView1.DataSource = tutors;
             //profile view column
             DataGridViewButtonColumn profileColumn = new DataGridViewButtonColumn();
             profileColumn.HeaderText = "View Profile";
             profileColumn.Text = "View";
             profileColumn.UseColumnTextForButtonValue = true;
-
-            dataGridView1.Columns.Add("Tutor_ID", "Tutor ID");
-            dataGridView1.Columns.Add("Tutor_Name", "Tutor Name");
-            dataGridView1.Columns.Add("Tutor_Phone", "Tutor Phone");
-            dataGridView1.Columns.Add("Sub_ID", "Subject ID");
             dataGridView1.Columns.Add(profileColumn);
 
-            dataGridView1.DataSource = tutors;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -79,6 +79,63 @@ namespace TutorHQ.Views.Tutor_Data
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<CheckAttendence>(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<ClassFees>(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllSchedules>(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllStudentsData>(this);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<AllTutorsData>(this);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            NavigateTo.To<LoginForm>(this);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                Tutor tutor = new Tutor();
+                tutor.Tutor_ID = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                tutor.Tutor_Name = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                tutor.Tutor_Phone = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                tutor.Sub_ID = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                Hide();
+                Tutor_Profile dashboard = new Tutor_Profile();
+                dashboard.tutor = tutor;
+                dashboard.Closed += (s, args) => this.Close();
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    dashboard.WindowState = FormWindowState.Maximized;
+                }
+                dashboard.Show();
+            }
         }
     }
 }

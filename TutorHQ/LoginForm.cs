@@ -25,7 +25,7 @@ namespace TutorHQ
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text.Trim()))
+            /*if (string.IsNullOrEmpty(txtName.Text.Trim()))
             {
                 txtName.Focus();
                 errorProvider1.SetError(txtName, "Username Cannot be null");
@@ -56,7 +56,8 @@ namespace TutorHQ
 
 
             }
-
+            */
+            NavigateTo.To<Dashboard>(this);
 
         }
 

@@ -20,7 +20,6 @@ namespace TutorHQ.Controllers
             {
                 using (SqlConnection connection = GetConnection())
                 {
-                    connection.Open();
 
                     // Add the tutor to the Tutor table
                     string tutorSql = "INSERT INTO Tutor (Tutor_Name, Tutor_Phone, Sub_ID) VALUES (@name, @phone, @subID)";
@@ -77,7 +76,6 @@ namespace TutorHQ.Controllers
             {
                 using (SqlConnection connection = GetConnection())
                 {
-                    connection.Open();
 
                     // Update the tutor in the Tutor table
                     string tutorSql = "UPDATE Tutor SET Tutor_Name = @name, Tutor_Phone = @phone, Sub_ID = @subID WHERE Tutor_ID = @id";
@@ -248,6 +246,43 @@ namespace TutorHQ.Controllers
             }
 
             return tutor;
+        }
+
+        public static Subject GetSubjectByID(string id)
+        { 
+           Subject subject = new Subject();
+
+            try
+            {
+                using (SqlConnection connection = GetConnection())
+                {
+
+                    string sql = "SELECT * FROM Subject WHERE Sub_ID = @id";
+
+                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    {
+                        command.Parameters.AddWithValue("@id", id);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                subject.Sub_ID = reader["Sub_ID"].ToString();
+                                subject.Sub_Name = reader["Sub_Name"].ToString();
+                                subject.Stream = reader["Stream"].ToString();
+                            }
+                        }
+                    }
+                }
+
+                Console.WriteLine("Subject retrieved successfully!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred while retrieving the subject: " + ex.Message);
+            }
+
+            return subject;
         }
 
         //show all subjects
